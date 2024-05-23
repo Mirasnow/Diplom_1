@@ -45,6 +45,8 @@ class TestBurger:
         burger.add_ingredient(MockIngredientSauce.mock_ingredient_sauce)
         burger.move_ingredient(0, 1)
         assert burger.get_price() == 5050
+        assert burger.ingredients[0].get_name() == 'Соус XX'
+        assert burger.ingredients[1].get_name() == 'Котлетка До-до'
 
     def test_burger_get_receipt(self, burger):
         burger.add_ingredient(MockIngredientFilling.mock_ingredient_filling)
